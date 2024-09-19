@@ -1,5 +1,4 @@
 <!-- The Side Bar -->
-
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
@@ -42,58 +41,24 @@
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+  <div class="sidebar-bottom d-flex justify-content-center align-items-center w-100" style="padding: 0 1rem; gap: 0.75rem;">
     {% unless site.theme_mode %}
-      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle" style="margin-right: 0.75rem;">
         <i class="fas fa-adjust"></i>
       </button>
-
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border"></span>
-      {% endif %}
     {% endunless %}
-
-    {% for entry in site.data.contact %}
-      {% case entry.type %}
-        {% when 'github', 'twitter' %}
-          {%- capture url -%}
-            https://{{ entry.type }}.com/{{ site[entry.type].username }}
-          {%- endcapture -%}
-        {% when 'email' %}
-          {% assign email = site.social.email | split: '@' %}
-          {%- capture url -%}
-            javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-          {%- endcapture -%}
-        {% when 'rss' %}
-          {% assign url = '/feed.xml' | relative_url %}
-        {% else %}
-          {% assign url = entry.url %}
-      {% endcase %}
-
-      {% if url %}
-        <a
-          href="{{ url }}"
-          aria-label="{{ entry.type }}"
-          {% assign link_types = '' %}
-
-          {% unless entry.noblank %}
-            target="_blank"
-            {% assign link_types = 'noopener noreferrer' %}
-          {% endunless %}
-
-          {% if entry.type == 'mastodon' %}
-            {% assign link_types = link_types | append: ' me' | strip %}
-          {% endif %}
-
-          {% unless link_types == empty %}
-            rel="{{ link_types }}"
-          {% endunless %}
-        >
-          <i class="{{ entry.icon }}"></i>
-        </a>
-      {% endif %}
-    {% endfor %}
+  
+    <!-- GitHub -->
+    <a href="https://github.com/jjwm10625" aria-label="GitHub" target="_blank" rel="noopener noreferrer" style="margin-right: 0.75rem;">
+      <i class="fab fa-github"></i>
+    </a>
+  
+    <!-- Gmail -->
+    <a href="javascript:location.href = 'mailto:choyeongseo950@gmail.com'" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
   </div>
   <!-- .sidebar-bottom -->
+  
 </aside>
 <!-- #sidebar -->
