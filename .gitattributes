@@ -3,3 +3,4 @@
 *.js linguist-vendored
 *.rb linguist-vendored
 *.sh linguist-vendored
+*.scss linguist-vendored
