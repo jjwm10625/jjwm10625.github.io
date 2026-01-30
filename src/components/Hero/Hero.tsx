@@ -17,9 +17,7 @@ const Hero = () => {
       >
         <h1 style={S.name}>Youngseo Cho</h1>
         <h2 style={S.role}>iOS Developer</h2>
-        <p style={S.intro}>
-          사용자 경험을 중심으로 구조를 설계하는 iOS 개발자입니다.
-        </p>
+        <p style={S.intro}>Zero에서 시작해, 결과까지 완성합니다 </p>
 
         <div style={S.buttonGroup}>
           {/* 프로젝트 보기 */}

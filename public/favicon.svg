@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    :root { 
+      --stroke-color: #000000; 
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --stroke-color: #ffffff; }
+    }
+    
+    .icon-line {
+      fill: none;                  /* 면 채우기 없음 */
+      stroke: var(--stroke-color); /* 테마별 선 색상 */
+      stroke-width: 1.8;           /* 선 두께를 얇게 조정 (닿지 않게) */
+      /* 둥근 끝처리(round) 속성을 제거하여 
+         기본값인 날카로운 직각(butt/miter)으로 표현됩니다.
+      */
+    }
+  </style>
+
+  <path class="icon-line" d="M8 10 L3 16 L8 22" />
+
+  <rect class="icon-line" x="11" y="10" width="7" height="12" rx="3.5" />
+
+  <path class="icon-line" d="M21 23 L25 9" />
+
+  <path class="icon-line" d="M27 10 L32 16 L27 22" />
+</svg>
