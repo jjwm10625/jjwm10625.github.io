@@ -3,7 +3,7 @@ import * as S from "./Contact.styles";
 
 const Contact = () => {
   const items = [
-    { label: "Email", href: "mailto:jjwm10625@sookmyung.ac.kr" },
+    { label: "Email", href: "mailto:youngseozero@gmail.com" },
     { label: "GitHub", href: "https://github.com/jjwm10625" },
     { label: "Velog", href: "https://velog.io/@jjwm10625/posts" },
     { label: "Tistory", href: "https://zzeroarchive.tistory.com/" },

@@ -20,7 +20,7 @@ const Profile = () => {
             <ul style={S.list}>
               <li style={S.item}>
                 <span style={S.label}>Email:</span>
-                jjwm10625@sookmyung.ac.kr
+                youngseozero@gmail.com
               </li>
               <li style={S.item}>
                 <span style={S.label}>Phone:</span>
