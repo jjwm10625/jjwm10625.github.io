@@ -20,7 +20,7 @@ export const content = {
   projects: [
     {
       title: "하이링구얼",
-      icon: "/앱아이콘.svg",
+      icon: "/hilingual-app-icon.svg",
       type: "iOS APPLICATION",
       description: "영어 일기, 기록, AI 피드백",
       detail: "하이링구얼: 영어 일기, 기록, AI 피드백",
